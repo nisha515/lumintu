@@ -1,0 +1,129 @@
+.footer {
+  background-color: $color-dark-blue;
+  color: $color-text-light;
+  padding: map-get($spacing-scale, 6) map-get($spacing-scale, 5) map-get($spacing-scale, 3);
+  font-family: $font-bold;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: map-get($spacing-scale, 5);
+  }
+
+
+  .footer-left {
+    flex: 1 1 250px;
+    color: $color-text-light;
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 153px;
+        height: 43px;
+      }
+
+    }
+
+
+    .footer-text {
+      margin-top: map-get($spacing-scale, 2);
+      color: $color-text-light;
+      line-height: 1.6;
+      font-size: 15px;
+      max-width: 280px;
+    }
+
+    .footer-phone {
+      margin-top: map-get($spacing-scale, 2);
+      font-size: 15px;
+      color: $color-btn-text;
+      i {
+        margin-right: 8px;
+        color: $color-btn-text;
+      }
+    }
+  }
+
+ 
+  .footer-column {
+    flex: 1 1 180px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: $fw-bold;
+      margin-bottom: map-get($spacing-scale, 3);
+      color: $color-btn-text;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: map-get($spacing-scale, 2);
+
+        a {
+          text-decoration: none;
+          color: $color-text-light;
+          font-size: 15px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    
+    &.work-hours,
+    .work-hours {
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 15px;
+        line-height: 1.6;
+
+        i {
+          color: $color-primary;
+          font-size: 14px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: map-get($spacing-scale, 5) 0 map-get($spacing-scale, 3);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $color-text-light;
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    .footer-container {
+      flex-direction: column;
+      gap: map-get($spacing-scale, 4);
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: map-get($spacing-scale, 2);
+      text-align: center;
+    }
+  }
+}
