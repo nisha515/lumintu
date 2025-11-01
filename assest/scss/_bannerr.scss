@@ -1,0 +1,136 @@
+.banner {
+    background-color: $color-light-bg;
+    padding: map-get($spacing-scale, 6) 0;
+    font-family: $font-bold;
+
+    .banner-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        padding: 0 80px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+
+    .banner-left {
+        flex: 1 1 50%;
+
+        .secure {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 14px;
+            color: $color-text-gray;
+            margin-bottom: 1rem;
+
+            i {
+                color: $color-primary;
+            }
+        }
+
+        h1 {
+            font-size: $fs-h1;
+            color: $color-text-dark;
+            font-weight: $fw-bold;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: $color-text-gray;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .cta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .btn {
+                background-color: $color-btn-bg;
+                color: $color-btn-text;
+                border: none;
+                border-radius: $radius-btn;
+                height: 57px;
+                width: 153px;
+                font-weight: $fw-medium;
+                font-family: $font-bold;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: $color-text-gray;
+                }
+            }
+
+            .phone {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $color-text-dark;
+                font-weight: $fw-medium;
+
+                i {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        .play-video {
+            margin-top: 3rem;
+
+            p {
+                color: $color-text-light;
+                font-size: 15px;
+
+                a {
+                    color: $color-primary;
+                    text-decoration: none;
+                    font-weight: $fw-medium;
+                }
+            }
+        }
+    }
+
+
+    .banner-right {
+        flex: 1 1 60%;
+        display: flex;
+        justify-content: flex-end;
+
+        .image-box {
+            max-width: 950px;
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 20px;
+                object-fit: cover;
+
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 4rem 2rem;
+
+        .banner-right {
+            justify-content: center;
+            margin-top: 3rem;
+
+            .image-box {
+                max-width: 100%;
+            }
+        }
+    }
+}

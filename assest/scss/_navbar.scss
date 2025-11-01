@@ -1,12 +1,13 @@
 .navbar {
   background-color: $color-light-bg;
-  padding: map-get($spacing-scale, 4) map-get($spacing-scale, 6);
+  padding: map-get($spacing-scale, 6) 0;
   font-family: $font-bold;
 
   .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 80px;
   }
 
 
@@ -44,7 +45,7 @@
           font-size: 16px;
           transition: color 0.3s ease;
 
-         
+
           &:hover {
             color: $color-primary;
           }
@@ -53,28 +54,28 @@
     }
   }
 
- .nav-btn {
-  .btn {
-    background-color: $color-btn-bg;
-    color: $color-btn-text;
-    text-decoration: none;
-    display: flex;                
-    align-items: center;
-    justify-content: center;
-    height: 57px;                
-    width: 149px;                 
-    border-radius: $radius-btn;
-    font-weight: $fw-medium;
-    font-size: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
+  .nav-btn {
+    .btn {
+      background-color: $color-btn-bg;
+      color: $color-btn-text;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 57px;
+      width: 149px;
+      border-radius: $radius-btn;
+      font-weight: $fw-medium;
+      font-size: 15px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
 
-    &:hover {
-      background-color: lighten($color-btn-bg, 10%);
-      transform: scale(1.03);
+      &:hover {
+        background-color: lighten($color-btn-bg, 10%);
+        transform: scale(1.03);
+      }
     }
   }
-}
 
 
 
