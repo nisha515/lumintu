@@ -1,0 +1,148 @@
+.how-it-works {
+    padding: map-get($spacing-scale, 6);
+    font-family: $font-bold;
+
+
+    .section-header.center {
+        text-align: center;
+        margin-bottom: map-get($spacing-scale, 6);
+        padding: 0 80px;
+
+        .subtitle-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: map-get($spacing-scale, 2);
+            margin-bottom: map-get($spacing-scale, 1);
+
+
+            .subtitle {
+                font-size: 12px;
+                letter-spacing: 2px;
+                color: $color-text-light;
+                text-transform: uppercase;
+                margin: 0;
+
+            }
+        }
+
+        .title {
+            font-size: $fs-h2;
+            font-family: $font-bold;
+            color: $color-text-dark;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+
+
+    .steps-grid {
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacing-scale, 6);
+
+        .step-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: map-get($spacing-scale, 5);
+            align-items: center;
+
+            &.reverse {
+                .step-image {
+                    order: 2;
+                }
+
+                .step-content {
+                    order: 1;
+                }
+            }
+
+            .step-image img {
+                width: 520px;
+                height: 296px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .step-content {
+                .step-number {
+                    font-size: 40px;
+                    font-weight: $fw-bold;
+                    color: $color-secondary;
+                    margin-bottom: map-get($spacing-scale, 1);
+                }
+
+                h3 {
+                    font-size: $fs-h4;
+                    font-weight: $fw-bold;
+                    color: $color-text-dark;
+                    margin-bottom: map-get($spacing-scale, 3);
+                }
+
+                .step-point {
+                    display: flex;
+                    gap: map-get($spacing-scale, 2);
+                    margin-bottom: map-get($spacing-scale, 3);
+
+                    .icon {
+
+                        font-size: 24px;
+                    }
+
+                    .point-title {
+                        font-weight: $fw-bold;
+                        font-size: 16px;
+                        color: $color-text-dark;
+                    }
+
+                    .point-text {
+                        font-size: 15px;
+                        color: $color-text-gray;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .bottom-content {
+        text-align: center;
+        margin-top: map-get($spacing-scale, 6);
+
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto map-get($spacing-scale, 4);
+            color: $color-text-gray;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+
+
+
+        }
+
+        .cta-btn {
+            background: $color-btn-bg;
+            color: $color-btn-text;
+            padding: 14px 32px;
+            border-radius: 99px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            height: 57px;
+            width: 149px;
+            
+
+
+        }
+    }
+
+    @media (max-width: 992px) {
+        .step-row {
+            grid-template-columns: 1fr;
+        }
+    }
+}

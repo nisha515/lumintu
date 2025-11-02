@@ -1,0 +1,157 @@
+.pricing-section {
+    background: #fff;
+    padding: map-get($spacing-scale, 6) 0;
+    font-family: $font-bold; 
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 80px;
+
+    }
+
+    .section-header {
+        margin-bottom: map-get($spacing-scale, 5);
+
+        .sub-heading {
+            color: $color-text-gray;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: $fw-medium;
+        }
+
+        h2 {
+            color: $color-text-dark;
+            font-size: $fs-h3;
+            font-weight: $fw-bold;
+            margin-top: map-get($spacing-scale, 2);
+        }
+    }
+
+    .pricing-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: map-get($spacing-scale, 4);
+
+        .card {
+            background-color: $color-light-bg;
+            border-radius: 12px;
+            padding: map-get($spacing-scale, 5) map-get($spacing-scale, 4);
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+
+            &.featured {
+                background-color: $color-dark-blue;
+                color: #fff;
+
+                .price,
+                .plan-name,
+                .label {
+                    color: #fff;
+                }
+
+                .plan-desc,
+                ul li {
+                    color: #e0e0e0;
+                }
+
+                .divider {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            .price {
+                font-size: 24px;
+                font-weight: $fw-bold;
+                color: $color-text-dark;
+                margin-bottom: map-get($spacing-scale, 2);
+
+                span {
+                    color: $color-primary;
+                    font-weight: $fw-medium;
+                }
+            }
+
+            .plan-name {
+                font-size: 20px;
+                font-weight: $fw-bold;
+                margin-bottom: map-get($spacing-scale, 1);
+            }
+
+            .plan-desc {
+                color: $color-text-gray;
+                font-size: 15px;
+                margin-bottom: map-get($spacing-scale, 3);
+            }
+
+            .divider {
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.1);
+                margin-bottom: map-get($spacing-scale, 3);
+            }
+
+            .coverage,
+            .features {
+                margin-bottom: map-get($spacing-scale, 3);
+
+                .label {
+                    text-transform: uppercase;
+                    font-weight: $fw-medium;
+                    font-size: 13px;
+                    color: $color-text-dark;
+                    margin-bottom: map-get($spacing-scale, 1);
+                }
+
+                ul {
+                    padding-left: 20px;
+
+                    li {
+                        color: $color-text-gray;
+                        font-size: 15px;
+                        margin-bottom: 0.4rem;
+                    }
+                }
+            }
+
+            .btn {
+                background-color: $color-btn-bg;
+                color: $color-btn-text;
+                padding: 0.9rem;
+                border: none;
+                height: 57px;
+                width: 254px;
+                border-radius: 99px;
+                font-weight: $fw-medium;
+                cursor: pointer;
+                font-size: 15px;
+                transition: 0.3s ease;
+
+                &:hover {
+                    background-color: darken($color-btn-bg, 10%);
+                }
+
+                &.white {
+                    background-color: #fff;
+                    color: $color-dark-blue;
+
+                    &:hover {
+                        background-color: lighten(#fff, 3%);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .pricing-cards {
+            flex-direction: column;
+
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
