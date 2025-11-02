@@ -1,0 +1,109 @@
+.services {
+  background-color: #fff;
+  font-family: $font-bold;
+  padding: map-get($spacing-scale, 6) 0;
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: map-get($spacing-scale, 5);
+
+    .subtitle {
+      color: $color-text-gray;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: map-get($spacing-scale, 2);
+    }
+
+    .title {
+      font-size: $fs-h3;
+      font-weight: $fw-bold;
+      color: $color-text-dark;
+    }
+
+    .view-all {
+      color: $color-primary;
+      font-weight: $fw-medium;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: map-get($spacing-scale, 4);
+
+    .service-card {
+      display: flex;
+      align-items: center;
+      background-color: $color-light-bg;
+      border-radius: 10px;
+      width: 90%; 
+      min-height: 206px; 
+      padding: map-get($spacing-scale, 4);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      .icon {
+        background-color: $color-dark-blue;
+        color: #fff;
+        font-size: 26px;
+        border-radius: 8px;
+        margin-right: map-get($spacing-scale, 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 92px; 
+        width: 80px;    
+        flex-shrink: 0;
+      }
+
+      .content {
+        h3 {
+          font-size: $fs-h4;
+          font-weight: $fw-bold;
+          margin-bottom: map-get($spacing-scale, 2);
+          color: $color-text-dark;
+        }
+
+        p {
+          color: $color-text-gray;
+          font-size: 15px;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      padding: 0 40px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr; 
+    }
+
+    .service-card {
+      flex-direction: row;
+      min-height: auto;
+    }
+  }
+}
